@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>موسوعة المقامات والأناشيد — ألطف المعاني</title>
+<style>
+:root{
+  --bg:#f6f3ed;--card:#fffdfa;--ink:#1d2730;--muted:#68737b;--navy:#12364e;--navy2:#1b4b68;
+  --gold:#b98a35;--gold-soft:#f3ead8;--line:#e5ded2;--soft:#efe9dd;--shadow:0 14px 40px rgba(18,43,59,.09);
+  --shadow-sm:0 7px 22px rgba(18,43,59,.055);--danger:#a44b42;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{background:var(--bg);scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#f7f4ee 0,#fbfaf7 58%,#f3efe7 100%);color:var(--ink);font-family:Tahoma,"Segoe UI",Arial,sans-serif;line-height:1.7;direction:rtl;min-height:100vh;padding-bottom:env(safe-area-inset-bottom)}
+button,input,select,textarea{font:inherit}
+button{touch-action:manipulation}
+.wrap{max-width:1180px;margin:auto;padding:24px}
+.hero{background:linear-gradient(135deg,var(--navy),#0d2738);color:white;border-radius:28px;padding:28px 30px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"♪";position:absolute;left:28px;top:-38px;font-size:190px;color:rgba(255,255,255,.045);transform:rotate(-12deg);pointer-events:none}
+.eyebrow{color:#eed59d;font-size:13px;letter-spacing:.35px}.hero h1{margin:7px 0 7px;font-size:clamp(27px,4vw,44px);line-height:1.25}.hero .sub{margin:0;color:#dfe8ee;max-width:820px}.hero .stats{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.hero .badge{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);color:#f4f7f9}
+.badge,.chip{display:inline-flex;align-items:center;gap:5px;padding:6px 10px;border-radius:999px;background:var(--gold-soft);border:1px solid var(--line);font-size:12px;color:#6c5328}
+.toolbar{margin-top:20px;background:rgba(255,253,250,.96);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.searchbox{display:flex;gap:10px}.searchbox input{flex:1;min-width:0;border:1px solid #d8d2c6;background:#fff;color:var(--ink);border-radius:15px;padding:15px 17px;font-size:18px;outline:none;transition:.18s}.searchbox input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(185,138,53,.13)}
+.btn,.linkbtn,.mode-pill,.maqam-toggle{border:0;border-radius:13px;padding:11px 15px;cursor:pointer;min-height:44px;font-weight:700;transition:.16s}
+.btn{background:var(--navy);color:white}.btn:hover{background:var(--navy2)}.btn.secondary,.linkbtn,.maqam-toggle{background:#fff;color:var(--navy);border:1px solid var(--line)}
+.linkbtn:hover,.btn.secondary:hover,.maqam-toggle:hover{border-color:#c9bcaa;background:#fbf8f2}.btn:disabled,.linkbtn:disabled{opacity:.45;cursor:not-allowed}
+.mode-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.mode-pill{background:#fff;color:var(--ink);border:1px solid var(--line);padding:8px 13px;min-height:38px;font-weight:500}.mode-pill.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.filters{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}.filter-label{display:flex;gap:7px;align-items:center;color:var(--muted);font-size:13px}.filters select{border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);padding:10px 12px;min-height:44px}.filters .spacer{flex:1}
+.notice{font-size:12px;color:var(--muted);margin:12px 2px 0}
+.maqam-panel{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow-sm);overflow:hidden}.maqam-panel.collapsed .maqams{display:none}.maqam-panel-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 16px}.maqam-panel-head strong{color:var(--navy)}.maqam-panel-head small{color:var(--muted)}
+.maqams{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;padding:0 14px 14px}.maqam{background:#fff;border:1px solid var(--line);border-radius:15px;padding:13px;cursor:pointer;text-align:right;color:var(--ink);min-height:78px;transition:.15s}.maqam:hover{transform:translateY(-1px);box-shadow:var(--shadow-sm)}.maqam.active{outline:2px solid var(--navy);border-color:var(--navy)}.maqam strong{display:block;font-size:16px;color:var(--navy)}.maqam small{color:var(--muted);font-size:11px}
+.bar{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:22px 2px 12px}.bar h2{margin:0;font-size:21px;color:#142b3a}.result-count{color:var(--muted);font-size:13px}
+.results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:19px;padding:18px;box-shadow:var(--shadow-sm);transition:.18s;min-width:0}.card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}.card-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.card h3{margin:2px 0 7px;font-size:20px;color:var(--navy);line-height:1.45}.card .meta{color:var(--muted);font-size:12.5px;line-height:1.9}.meta-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.snippet,.song-preview{margin-top:11px;background:#faf7f0;border-right:3px solid var(--gold);border-radius:11px;padding:10px 12px;color:#3d454b;line-height:1.95;font-size:14px;min-height:78px;max-height:132px;overflow:hidden;white-space:pre-wrap}.hl,mark{background:#ffe9a8;color:#2d250f;border-radius:4px;padding:0 2px}.actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:13px}.actions .primary-action{background:var(--navy);color:white;border-color:var(--navy)}.actions .primary-action:hover{background:var(--navy2)}.fav-star{background:transparent;border:0;color:#a7926c;font-size:25px;padding:3px 6px;cursor:pointer;line-height:1}.fav-star.on{color:#d0a443}.match-note{font-size:11px;color:var(--muted);margin-inline-start:auto}.song{border-right:1px solid var(--line)}
+.empty{grid-column:1/-1;text-align:center;padding:44px;background:white;border:1px dashed var(--line);border-radius:20px;color:var(--muted)}.pager{display:flex;gap:8px;justify-content:center;align-items:center;margin:20px}.footer{padding:28px 4px 12px;color:var(--muted);font-size:12px;line-height:1.8;text-align:center}
+.dialog,.song-dialog{position:fixed;inset:0;background:rgba(10,22,30,.68);display:none;align-items:center;justify-content:center;padding:18px;z-index:1000}.dialog.open,.song-dialog.open{display:flex}.viewer,.song-modal{background:#fff;max-width:1040px;width:100%;max-height:94vh;border-radius:24px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.32)}.viewer{height:min(94vh,1000px);display:grid;grid-template-rows:auto 1fr auto}.viewerHead,.viewerFoot,.song-modal-head{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--line);background:#fff}.viewerFoot{border-top:1px solid var(--line);border-bottom:0}.viewerBody{overflow:auto;background:#262725;text-align:center}.viewerBody img{max-width:100%;height:auto;display:block;margin:auto}.viewerText{background:#fff;color:var(--ink);text-align:right;padding:18px;white-space:pre-wrap;display:none}.viewerText.show{display:block}.song-modal-body{padding:20px;overflow:auto;max-height:calc(94vh - 70px)}.song-detail-meta{color:var(--muted);font-size:13px;line-height:2;margin-bottom:12px}.song-detail-lyrics{white-space:pre-wrap;line-height:2.05;font-size:16px;background:#fbfaf7;border:1px solid var(--line);border-radius:16px;padding:18px}.song-detail-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.kbd{border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:1px 5px;font-size:12px}.fav{color:var(--gold)}
+#pwaLoader{position:fixed;inset:0;z-index:2000;background:var(--bg);display:grid;place-items:center;padding:24px;text-align:center}#pwaLoader .box{max-width:560px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}#pwaLoader .spin{width:42px;height:42px;margin:0 auto 14px;border:4px solid var(--line);border-top-color:var(--navy);border-radius:50%;animation:pwaSpin .9s linear infinite}#pwaLoader small{display:block;color:var(--muted);margin-top:8px}@keyframes pwaSpin{to{transform:rotate(360deg)}}
+#iosInstallTip{position:fixed;z-index:1200;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));max-width:760px;margin:auto;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:var(--shadow);display:none;align-items:center;gap:10px}#iosInstallTip strong{display:block}#iosInstallTip small{color:var(--muted)}#iosInstallTip .dismiss{margin-inline-start:auto}
+@media(display-mode:standalone){#iosInstallTip{display:none!important}}
+@media(min-width:900px){.toolbar{position:relative;z-index:auto}}
+@media(max-width:900px){.maqams{grid-template-columns:repeat(3,minmax(0,1fr))}.results{grid-template-columns:1fr}}
+@media(max-width:620px){body{padding-top:env(safe-area-inset-top)}.wrap{padding:10px}.hero{padding:18px;border-radius:20px}.hero h1{font-size:26px}.hero .sub{font-size:13px}.hero .stats{display:none}.toolbar{padding:12px;border-radius:18px;margin-top:10px;position:relative;z-index:auto}.searchbox{display:grid;grid-template-columns:1fr auto;gap:8px}.searchbox input{font-size:16px;padding:13px 13px}.searchbox .btn{padding-inline:13px}.mode-pills{overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;scrollbar-width:none}.mode-pills::-webkit-scrollbar{display:none}.mode-pill{white-space:nowrap}.filters{display:grid;grid-template-columns:1fr 1fr;gap:8px}.filter-label{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr}.filters select{width:100%}.filters .spacer{display:none}.filters .btn,.filters .maqam-toggle{width:100%;padding-inline:9px}.maqam-panel{margin-top:10px}.maqam-panel-head{padding:10px 12px}.maqam-panel-head small{display:none}.maqams{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 10px 10px;gap:8px}.maqam{min-height:68px;padding:10px}.bar{align-items:flex-start;margin-top:16px}.bar h2{font-size:18px}.results{gap:10px}.card{padding:14px;border-radius:16px}.card h3{font-size:19px}.snippet,.song-preview{font-size:13.5px;max-height:120px}.actions .linkbtn{flex:1;min-width:120px}.viewer,.song-modal{border-radius:18px;max-height:96vh}.viewer{height:96vh}.viewerHead,.viewerFoot,.song-modal-head{padding:9px 10px}.viewerFoot span{display:none}.song-modal-body{padding:13px}.song-detail-lyrics{font-size:15px;padding:14px}.dialog,.song-dialog{padding:7px}.match-note{width:100%;margin:0}.footer{padding-bottom:calc(22px + env(safe-area-inset-bottom))}}
+
+/* V4 notes + personal-data tools */
+.note-box{margin-top:16px;border:1px solid var(--line);border-radius:16px;background:#fffdf8;padding:14px}
+.note-box h3{margin:0 0 5px;color:var(--navy);font-size:16px}.note-help{color:var(--muted);font-size:12px;margin:0 0 8px}
+.note-input{width:100%;min-height:92px;resize:vertical;border:1px solid #d8d2c6;border-radius:12px;background:#fff;padding:11px 12px;outline:none;line-height:1.8;color:var(--ink)}
+.note-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(185,138,53,.12)}
+.note-preview{margin-top:10px;border:1px dashed #d6c6aa;background:#fffaf0;border-radius:11px;padding:9px 11px;color:#68522d;font-size:13px;line-height:1.8;white-space:pre-wrap}
+.note-preview strong{color:#8a6729}.note-match{box-shadow:inset 0 0 0 1px rgba(185,138,53,.28)}
+.viewerNote{display:none;background:#f8f5ee;color:var(--ink);text-align:right;padding:18px;min-height:100%;overflow:auto}.viewerNote.show{display:block}.viewerNote .note-input{min-height:160px}
+.data-panel{display:none;margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:14px;background:#fbf8f2}.data-panel.open{display:block}.data-actions{display:flex;gap:8px;flex-wrap:wrap}.data-status{font-size:12px;color:var(--muted);margin-top:7px}.privacy-mini{font-size:11px;color:var(--muted);margin-top:6px}
+@media(max-width:620px){.note-box{padding:11px}.note-input{min-height:100px}.data-actions .btn,.data-actions .linkbtn{flex:1;min-width:135px}.viewerNote{padding:12px}}
+</style>
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#12364e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="ألطف المعاني">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+</head>
+<body>
+<div id="pwaLoader" role="status" aria-live="polite"><div class="box"><div class="spin"></div><strong>جاري فتح موسوعة المقامات والأناشيد…</strong><small id="pwaLoadMsg">في أول تشغيل قد يستغرق تنزيل الكتاب وحفظه للعمل دون إنترنت بعض الوقت.</small></div></div>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">مكتبة بحث عربية للمقامات والأناشيد</div>
+    <h1>موسوعة المقامات والأناشيد</h1>
+    <p class="sub">بحث داخل «ألطف المعاني في أجمل المغاني» بالمقام، اسم النشيد، كلمة أو عبارة، مع الرجوع إلى صورة الصفحة الأصلية.</p>
+    <div class="stats"><span class="badge">427 صفحة أصلية</span><span class="badge">10 أقسام مقامية</span><span class="badge">بحث عربي مرن</span><span class="badge">يعمل دون إنترنت بعد التثبيت</span></div>
+  </section>
+
+  <section class="toolbar" aria-label="أدوات البحث">
+    <div class="searchbox"><input id="q" autocomplete="off" inputmode="search" enterkeyhint="search" placeholder="مثال: راست، أرقني الغرام، يا رسول الله، عمر البطش…"><button class="btn" id="go">بحث</button></div>
+    <div class="mode-pills" id="modePills" aria-label="طريقة البحث">
+      <button class="mode-pill active" data-search-mode="smart">بحث ذكي</button>
+      <button class="mode-pill" data-search-mode="phrase">العبارة نفسها</button>
+      <button class="mode-pill" data-search-mode="all">كل الكلمات</button>
+    </div>
+    <div class="filters">
+      <label class="filter-label">المقام / القسم: <select id="sectionFilter"><option value="">كل الكتاب</option></select></label>
+      <select id="mode" aria-label="طريقة البحث" hidden><option value="smart">بحث مرن</option><option value="phrase">العبارة نفسها</option><option value="all">كل الكلمات</option></select>
+      <span class="spacer"></span>
+      <button class="maqam-toggle" id="maqamToggle" type="button">المقامات ▾</button>
+      <button class="btn secondary" id="favoritesBtn">☆ المفضلة</button>
+      <button class="btn secondary" id="dataToggle" type="button">بياناتي</button>
+      <button class="btn secondary" id="clear">مسح</button>
+    </div>
+    <p class="notice">النص الآلي يساعدك على الوصول إلى المكان بسرعة؛ عند أي اختلاف في القراءة تبقى صورة الصفحة الأصلية هي المرجع. كما يبحث التطبيق داخل ملاحظاتك الشخصية.</p>
+    <div class="data-panel" id="dataPanel">
+      <div class="data-actions"><button class="linkbtn" id="dataExport" type="button">تصدير ملاحظاتي ومفضلتي</button><button class="linkbtn" id="dataImportBtn" type="button">استيراد نسخة احتياطية</button><input id="dataImport" type="file" accept="application/json,.json" hidden></div>
+      <div class="data-status" id="dataStatus"></div><div class="privacy-mini">الملاحظات والمفضلة محفوظة على جهازك فقط. التصدير/الاستيراد هو الطريقة اليدوية لنقلها بين اللابتوب والـ iPhone.</div>
+    </div>
+  </section>
+
+  <section class="maqam-panel collapsed" id="maqamPanel">
+    <div class="maqam-panel-head"><div><strong>استكشاف المقامات</strong><br><small>اختر مقاماً لعرض صفحاته ونتائجه.</small></div><button class="linkbtn" id="maqamClose" type="button">إخفاء</button></div>
+    <div id="maqams" class="maqams"></div>
+  </section>
+
+  <div class="bar"><h2 id="resultTitle">كل الأناشيد المفهرسة</h2><span id="resultCount" class="result-count">0 نتيجة</span></div>
+  <main id="results" class="results"></main>
+  <div id="pager" class="pager"></div>
+  <div class="footer">واجهة موحدة للابتوب والويب وiPhone/iPad. البحث والمفضلة يعملان محلياً، ولا تُرسل عبارات البحث إلى أي جهة.</div>
+</div>
+
+<div class="dialog" id="dialog" aria-hidden="true"><div class="viewer">
+  <div class="viewerHead"><div><strong id="vTitle">الصفحة</strong> <span id="vMeta" class="chip"></span></div><div><button class="linkbtn" id="vTextBtn">نص البحث</button><button class="linkbtn" id="vNoteBtn">ملاحظة</button><button class="linkbtn" id="vFav">☆</button><button class="linkbtn" id="vClose">إغلاق</button></div></div>
+  <div class="viewerBody" id="vBody"><img id="vImg" alt="صورة الصفحة الأصلية"><div class="viewerText" id="vText"></div><div class="viewerNote" id="vNotePanel"><h3>ملاحظتي على هذه الصفحة</h3><p class="note-help">أي كلمة تكتبها هنا تصبح قابلة للبحث. مثال: «حضرة ذكر».</p><textarea id="vNote" class="note-input" placeholder="اكتب ملاحظتك…"></textarea><div class="actions"><button class="btn" id="vNoteSave" type="button">حفظ الملاحظة</button><button class="linkbtn" id="vNoteClear" type="button">حذف الملاحظة</button></div></div></div>
+  <div class="viewerFoot"><button class="linkbtn" id="vPrev">السابق</button><span>استخدم <span class="kbd">←</span> <span class="kbd">→</span> للتنقل و <span class="kbd">Esc</span> للإغلاق</span><button class="linkbtn" id="vNext">التالي</button></div>
+</div></div>
+
+<div class="song-dialog" id="songDialog" aria-hidden="true"><div class="song-modal">
+  <div class="song-modal-head"><strong id="sdTitle"></strong><button class="linkbtn" id="sdClose">إغلاق ✕</button></div>
+  <div class="song-modal-body"><div id="sdMeta" class="song-detail-meta"></div><div id="sdLyrics" class="song-detail-lyrics"></div><div class="note-box"><h3>ملاحظتي</h3><p class="note-help">مثال: «حضرة ذكر»، طبقة البداية، مكان النقل أو أي تصنيف خاص بك. الملاحظة تدخل تلقائياً في البحث.</p><textarea id="sdNote" class="note-input" placeholder="اكتب ملاحظتك على هذا النشيد…"></textarea><div class="actions"><button class="btn" id="sdNoteSave" type="button">حفظ الملاحظة</button><button class="linkbtn" id="sdNoteClear" type="button">حذف الملاحظة</button></div></div><div class="song-detail-actions"><button class="btn" id="sdPage">الصفحة الأصلية</button><button class="btn secondary" id="sdCopy">نسخ النص</button><button class="btn secondary" id="sdFav">☆ مفضلة</button></div></div>
+</div></div>
+
+
+<script id="pwa-bootstrap">
+(function(){
+  const APP_URL='./app-226a8a470fa5.js', UI_URL='./ui-v4.js';
+  const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  const isStandalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+  const loader=document.getElementById('pwaLoader'),loadMsg=document.getElementById('pwaLoadMsg');
+  const setMsg=t=>{if(loadMsg)loadMsg.textContent=t}, hideLoader=()=>{if(loader)loader.remove()};
+  function showInstallTip(){if(!isIOS||isStandalone||sessionStorage.getItem('iosTipHidden')==='1')return;const tip=document.createElement('div');tip.id='iosInstallTip';tip.innerHTML='<div><strong>تثبيت على iPhone / iPad</strong><small>في Safari: مشاركة ← إضافة إلى الشاشة الرئيسية. بعد اكتمال أول فتح سيعمل التطبيق دون إنترنت.</small></div><button class="linkbtn dismiss" type="button">إخفاء</button>';document.body.appendChild(tip);tip.style.display='flex';tip.querySelector('.dismiss').onclick=()=>{sessionStorage.setItem('iosTipHidden','1');tip.remove()}}
+  function loadScript(src){return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.async=false;s.onload=resolve;s.onerror=reject;document.body.appendChild(s)})}
+  function waitForController(ms){if(navigator.serviceWorker.controller)return Promise.resolve(true);return new Promise(resolve=>{let done=false;const finish=v=>{if(done)return;done=true;resolve(v)};navigator.serviceWorker.addEventListener('controllerchange',()=>finish(true),{once:true});setTimeout(()=>finish(!!navigator.serviceWorker.controller),ms)})}
+  async function boot(){try{const sw=('serviceWorker'in navigator)&&(location.protocol==='https:'||location.hostname==='localhost'||location.hostname==='127.0.0.1');if(sw){setMsg('جاري تجهيز التطبيق للعمل دون إنترنت…');await navigator.serviceWorker.register('./sw.js',{scope:'./'});await navigator.serviceWorker.ready;await waitForController(5000);setMsg('جاري تحميل الكتاب وفهرس البحث للمرة الأولى…')}else setMsg('جاري تحميل الكتاب…');await loadScript(APP_URL);await loadScript(UI_URL);hideLoader();showInstallTip();document.documentElement.dataset.appReady='1'}catch(err){console.error(err);setMsg('تعذر تحميل التطبيق. تحقق من أن جميع ملفات الحزمة موجودة ثم أعد المحاولة.');if(loader){const sp=loader.querySelector('.spin');if(sp)sp.style.display='none'}}}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
+})();
+</script>
+</body></html>
