@@ -1,0 +1,37 @@
+ألطف المعاني — PRE_DELIVERY_AUDIT V5
+====================================
+STATUS: PASS
+
+Scope audited:
+- Structured song catalogue and data integrity
+- Arabic advanced/fuzzy search
+- Notes/tags/lists personal search
+- iPhone scroll behavior architecture
+- Source image viewer show/hide controls and zoom
+- Landscape viewer sizing
+- Song modal tabs and performance mode
+- Local admin corrections + quality states
+- Audio metadata/local blob architecture + time markers
+- Backup/restore schema
+- Direct share/QR/print actions
+- PWA manifest/service worker/offline core
+- Laptop single-file build
+
+Evidence:
+- TEST_REPORT_V5.txt: 78/78 PASS
+- 427/427 page records and 427/427 page images
+- 533 structured song records with unique IDs
+- Explicit quality split: manual_verified vs ocr_review
+- No body overflow lock, no touchmove preventDefault, no sticky toolbar
+- Mobile touch viewport browser test: modal scrolling PASS
+- Viewer controls hidden initially, image-tap reveal PASS
+- Viewer zoom 120% control and landscape width adaptation PASS
+- Main page scrolling after viewer close PASS
+- Advanced search regressions PASS
+- Admin correction -> manual verified PASS
+- JavaScript syntax PASS for app.js, qr.js, sw.js
+
+Known limitation / honesty gate:
+Real Safari hardware execution cannot be claimed from this container. Direct localhost/file navigation is blocked by the environment. The same production HTML/CSS/JS was nevertheless exercised interactively in headless Chromium with an iPhone-sized touch viewport and embedded production data. Final real-device Safari validation should be done after publishing V5 to HTTPS.
+
+PRE_DELIVERY_AUDIT = PASS

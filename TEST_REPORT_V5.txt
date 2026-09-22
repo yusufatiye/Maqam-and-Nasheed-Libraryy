@@ -1,0 +1,81 @@
+[PASS] 12 logical sections :: 12
+[PASS] 427 page records :: 427
+[PASS] Page numbering exact 1..427
+[PASS] 427 source page images :: 427
+[PASS] 533 structured song records :: 533
+[PASS] Song IDs unique :: 533
+[PASS] Every structured song has required fields
+[PASS] Every song title nonblank
+[PASS] Every book song source image exists
+[PASS] Quality split explicit manual/OCR :: {'manual_verified': 8, 'ocr_review': 525}
+[PASS] No invalid person placeholder promoted
+[PASS] Tag option سهل
+[PASS] Tag option صعب
+[PASS] Tag option مجلس خاص
+[PASS] Tag option تعطيرات نبوية
+[PASS] Tag option إنشاد
+[PASS] Tag option حضرة ذكر سريعة
+[PASS] Tag option حضرة ذكر بطيئة
+[PASS] Tag option أداء فريدة
+[PASS] Advanced query fields
+[PASS] Fuzzy Arabic search implemented
+[PASS] Notes participate in search
+[PASS] Tags participate in search
+[PASS] Lists participate in search
+[PASS] Audio local IndexedDB support
+[PASS] Audio time markers support
+[PASS] Backup includes requested personal data
+[PASS] Direct share link per song
+[PASS] QR generator bundled
+[PASS] Print / save PDF action
+[PASS] Admin mode hidden by default
+[PASS] Admin manual verification state
+[PASS] Original/OCR/manual separation copy
+[PASS] Custom poem/image support
+[PASS] Performance mode controls
+[PASS] No JS body scroll lock
+[PASS] Song modal scroll is iOS-friendly
+[PASS] Viewer pinch/pan is enabled
+[PASS] Viewer controls hidden by default
+[PASS] Viewer tap toggles controls
+[PASS] Viewer supports zoom 50%-300%
+[PASS] Viewer landscape responsive rule
+[PASS] No sticky toolbar
+[PASS] No duplicate DOM IDs :: []
+[PASS] Node syntax app.js
+[PASS] Node syntax qr.js
+[PASS] Node syntax sw.js
+[PASS] Manifest standalone PWA
+[PASS] Service worker V5 cache
+[PASS] Service worker precaches structured data
+[PASS] Web package has no 59MB monolithic data script
+[PASS] Web initial JSON payload under 3MB
+[PASS] Laptop standalone >50MB :: 61192551
+[PASS] Laptop standalone no external script
+[PASS] Laptop standalone no external stylesheet
+[PASS] Laptop standalone embeds 427 page images :: 427
+[PASS] Laptop standalone embeds structured V5 data
+[PASS] Browser: V5 data loads :: 533 سجل • 427 صفحة
+[PASS] Browser: initial 30 cards rendered :: 30
+[PASS] Browser search مقام: راست :: 122
+[PASS] Browser search راست + يا رسول الله :: 7
+[PASS] Browser search شاعر: عمر البطش :: 2
+[PASS] Browser typo-tolerant search رسول اللة :: 46
+[PASS] Browser: song modal opens
+[PASS] Browser: iPhone song modal scroll works :: {'scrollHeight': 693, 'clientHeight': 615, 'overflow': 'auto', 'touch': 'pan-y', 'scrollTop': 78}
+[PASS] Browser personal search ملاحظة: حضرة ذكر تجربة :: 1
+[PASS] Browser personal search وسم: سهل :: 1
+[PASS] Browser personal search قائمة: برنامج اختبار :: 1
+[PASS] Browser QR renders :: [231, 231]
+[PASS] Browser viewer opens
+[PASS] Browser viewer controls hidden initially
+[PASS] Browser viewer controls show on image tap
+[PASS] Browser viewer zoom control :: 120%
+[PASS] Browser landscape viewer fills iPhone width :: 1013
+[PASS] Browser main scroll resumes after viewer :: 1000
+[PASS] Browser no page errors :: []
+[PASS] Browser admin tab enabled locally
+[PASS] Browser admin correction marks manual verified :: موثق يدوياً ✅
+
+TOTAL 78/78 PASS
+NOTE: Live browser interaction was executed in headless Chromium using the same V5 HTML/CSS/JS with embedded production data. Direct localhost/file navigation is blocked by this environment, so real-device Safari hardware behavior is not claimed. iOS-specific scroll/viewport rules and mobile interaction paths were exercised in an iPhone-sized touch viewport.

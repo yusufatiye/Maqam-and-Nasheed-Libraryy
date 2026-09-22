@@ -1,10 +1,12 @@
-/sw.js
-  Cache-Control: no-cache
 /index.html
   Cache-Control: no-cache
-/ui-v4.js
+/app.js
   Cache-Control: no-cache
-/app-226a8a470fa5.js
+/styles.css
+  Cache-Control: no-cache
+/sw.js
+  Cache-Control: no-cache
+/data/*
+  Cache-Control: public, max-age=3600
+/pages/*
   Cache-Control: public, max-age=31536000, immutable
-/manifest.webmanifest
-  Content-Type: application/manifest+json
